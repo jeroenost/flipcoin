@@ -31,7 +31,7 @@ contract Flipcoin is Ownable, usingProvable  {
   function processResult(address payable better, uint256 amount, uint8 result) private {
     if (result == 0) {
       balance += amount;
-      emit BetResult(better, -amount);
+      emit BetResult(better, 0);
     } else {
       better.transfer(2 * amount);
       balance -= amount;

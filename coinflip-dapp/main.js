@@ -4,7 +4,7 @@ var myAccount;
 
 $(document).ready(function() {
     window.ethereum.enable().then(function(accounts){
-      contractInstance = new web3.eth.Contract(abi, "0x85B65E39b680C2538317Ee19F4de8b92A7bfe151",
+      contractInstance = new web3.eth.Contract(abi, "0xC940F94C8c4D3f5719B2B9D9DF3F049E687A40C5",
       { from: accounts[0]});
       myAccount = accounts[0];
       getBalances();
@@ -20,7 +20,7 @@ $(document).ready(function() {
                   if (amount > 0) {
                     msg = "You won: "+prettyBalance(amount);
                   } else {
-                    msg = "You lost: "+prettyBalance(-amount);
+                    msg = "You lost";
                   }
                   console.log(msg);
                   $("#message").text(msg);
