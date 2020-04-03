@@ -1,0 +1,7 @@
+coinflip/build
+coinflip/.secret
+coinflip/node_modules
+coinflip/package-lock.json
+coinflip/*.lock
+coinflip/truffle-config*.*
+
